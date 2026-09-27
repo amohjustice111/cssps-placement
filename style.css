@@ -1,0 +1,397 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    color: #222;
+}
+
+
+/* ==============================
+   TOP HEADER
+   ============================== */
+
+.top-header {
+    width: 100%;
+    background: white;
+    border-top: 7px solid #006b3f;
+    border-bottom: 3px solid #006b3f;
+    padding: 22px 50px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-logo {
+    font-size: 45px;
+}
+
+.header-text h1 {
+    margin: 0;
+    color: #006b3f;
+    font-size: 28px;
+}
+
+.header-text p {
+    margin: 6px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   FIRST SCREEN
+   ============================== */
+
+.home-screen {
+    min-height: calc(100vh - 110px);
+    width: 100%;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 30px;
+}
+
+.portal-card {
+    width: 520px;
+    background: white;
+
+    border: 1px solid #d9d9d9;
+    border-top: 5px solid #006b3f;
+
+    padding: 50px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.logo {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.portal-card h1 {
+    margin: 0;
+    color: #006b3f;
+    font-size: 30px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+
+
+/* ==============================
+   FORM
+   ============================== */
+
+.form-box {
+    text-align: left;
+}
+
+.form-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 16px;
+
+    border: 1px solid #bbb;
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.form-box input:focus {
+    border: 2px solid #006b3f;
+}
+
+
+.form-box button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #006b3f;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.form-box button:hover {
+    background: #00532f;
+}
+
+
+/* ==============================
+   RESULT SCREEN
+   ============================== */
+
+.result-screen {
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 60px 30px;
+
+    background: white;
+
+    display: none;
+}
+
+.result-container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.result-container > h1 {
+    text-align: center;
+
+    color: #006b3f;
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+.result-subtitle {
+    text-align: center;
+
+    color: #666;
+
+    font-size: 16px;
+
+    margin-bottom: 45px;
+}
+
+
+/* ==============================
+   SCHOOL RESULT CARD
+   ============================== */
+
+.school-card {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-top: 5px solid #006b3f;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    min-height: 450px;
+}
+
+
+/* SCHOOL IMAGE */
+
+.school-image {
+    width: 50%;
+    min-height: 450px;
+
+    background: #eee;
+}
+
+.school-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 450px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* SCHOOL INFORMATION */
+
+.school-information {
+    width: 50%;
+
+    padding: 45px;
+}
+
+.school-information h2 {
+    color: #006b3f;
+
+    font-size: 30px;
+
+    margin-top: 0;
+
+    margin-bottom: 35px;
+}
+
+
+/* INFORMATION */
+
+.info-row {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.info-row span {
+    color: #777;
+
+    font-size: 14px;
+}
+
+.info-row strong {
+    font-size: 18px;
+
+    color: #222;
+}
+
+
+/* STATUS */
+
+.status {
+    margin-top: 30px;
+
+    padding: 14px;
+
+    text-align: center;
+
+    border: 1px solid #006b3f;
+
+    border-radius: 5px;
+
+    background: #f1faf5;
+
+    color: #006b3f;
+
+    font-weight: bold;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    display: block;
+
+    margin: 40px auto 0;
+
+    padding: 15px 30px;
+
+    border: 1px solid #006b3f;
+
+    border-radius: 5px;
+
+    background: white;
+
+    color: #006b3f;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background: #006b3f;
+
+    color: white;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 700px) {
+
+    .top-header {
+        padding: 18px 20px;
+    }
+
+    .header-content {
+        gap: 12px;
+    }
+
+    .header-logo {
+        font-size: 35px;
+    }
+
+    .header-text h1 {
+        font-size: 21px;
+    }
+
+    .home-screen {
+        padding: 30px 18px;
+    }
+
+    .portal-card {
+        width: 100%;
+        padding: 35px 25px;
+    }
+
+    .portal-card h1 {
+        font-size: 25px;
+    }
+
+    .school-card {
+        flex-direction: column;
+    }
+
+    .school-image {
+        width: 100%;
+        min-height: 260px;
+    }
+
+    .school-image img {
+        min-height: 260px;
+    }
+
+    .school-information {
+        width: 100%;
+        padding: 30px;
+    }
+}

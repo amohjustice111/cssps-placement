@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Placement Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- TOP HEADER -->
+
+    <header class="top-header">
+
+        <div class="header-content">
+
+            <div class="header-logo">
+                🎓
+            </div>
+
+            <div class="header-text">
+
+                <h1>
+                    Student Placement Portal
+                </h1>
+
+                <p>
+                    School Placement Checking System
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- FIRST SCREEN -->
+
+    <section class="home-screen">
+
+        <div class="portal-card">
+
+
+            <div class="logo">
+                🎓
+            </div>
+
+
+            <h1>
+                Check School Placement
+            </h1>
+
+
+            <p class="subtitle">
+                Enter your index number and date of birth
+                to check your placement.
+            </p>
+
+
+
+            <!-- FORM -->
+
+            <div class="form-box">
+
+
+                <!-- INDEX NUMBER -->
+
+                <label for="indexNumber">
+                    Index Number
+                </label>
+
+                <input
+                    type="text"
+                    id="indexNumber"
+                    placeholder="Enter your index number"
+                >
+
+
+
+                <!-- DATE OF BIRTH -->
+
+                <label for="dateOfBirth">
+                    Date of Birth
+                </label>
+
+                <input
+                    type="date"
+                    id="dateOfBirth"
+                >
+
+
+
+                <!-- CHECK BUTTON -->
+
+                <button id="checkButton">
+                    CHECK PLACEMENT
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SECOND SCREEN -->
+
+    <section
+        class="result-screen"
+        id="resultScreen"
+    >
+
+
+        <div class="result-container">
+
+
+            <h1>
+                Placement Result
+            </h1>
+
+
+            <p class="result-subtitle">
+                Your school placement information
+            </p>
+
+
+
+            <!-- SCHOOL CARD -->
+
+            <div class="school-card">
+
+
+                <!-- SCHOOL IMAGE -->
+
+                <div class="school-image">
+
+                    <img
+                        id="schoolImage"
+                        src=""
+                        alt="School picture"
+                    >
+
+                </div>
+
+
+
+                <!-- SCHOOL INFORMATION -->
+
+                <div class="school-information">
+
+
+                    <h2 id="schoolName">
+                        School Name
+                    </h2>
+
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Student Name
+                        </span>
+
+                        <strong id="studentName">
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Index Number
+                        </span>
+
+                        <strong id="studentIndex">
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Date of Birth
+                        </span>
+
+                        <strong id="studentDateOfBirth">
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Programme
+                        </span>
+
+                        <strong id="programme">
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="status">
+
+                        PLACEMENT CONFIRMED
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BACK BUTTON -->
+
+            <button
+                class="back-button"
+                onclick="goBack()"
+            >
+
+                CHECK ANOTHER INDEX NUMBER
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
