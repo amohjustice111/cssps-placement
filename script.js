@@ -1,180 +1,157 @@
-const students = {
+document.addEventListener("DOMContentLoaded", function () {
 
-    "1234567890": {
-        name: "John Mensah",
-        school: "Accra Academy",
-        programme: "General Arts",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Accra_Academy_Administration_Block.jpg/1280px-Accra_Academy_Administration_Block.jpg"
-    },
+    const students = {
 
-    "2345678901": {
-        name: "Ama Boateng",
-        school: "Prempeh College",
-        programme: "General Science",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=80"
-    },
+        "1234567890": {
+            name: "John Mensah",
+            school: "Accra Academy",
+            programme: "General Arts",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Accra_Academy_Administration_Block.jpg/1280px-Accra_Academy_Administration_Block.jpg"
+        },
 
-    "3456789012": {
-        name: "Kojo Asante",
-        school: "Mfantsipim School",
-        programme: "Business",
-        image: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Mfantsipim_School_main_entrance.jpg"
-    },
+        "2345678901": {
+            name: "Ama Boateng",
+            school: "Prempeh College",
+            programme: "General Science",
+            image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=80"
+        },
 
-    "4567890123": {
-        name: "Abena Owusu",
-        school: "Wesley Girls High School",
-        programme: "General Arts",
-        image: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=1000&q=80"
-    },
+        "3456789012": {
+            name: "Kojo Asante",
+            school: "Mfantsipim School",
+            programme: "Business",
+            image: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Mfantsipim_School_main_entrance.jpg"
+        },
 
-    "1503009010": {
-        name: "Amoh Justice Adjei",
-        school: "Dormaa Senior High",
-        programme: "General Arts",
-        image: "https://share.google/57ufoXxOHGzoiq0wT"
-    }
+        "4567890123": {
+            name: "Abena Owusu",
+            school: "Wesley Girls High School",
+            programme: "General Arts",
+            image: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=1000&q=80"
+        },
 
-};
+        "1503009010": {
+            name: "Amoh Justice",
+            school: "Accra Academy",
+            programme: "General Arts",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Accra_Academy_Administration_Block.jpg/1280px-Accra_Academy_Administration_Block.jpg"
+        }
 
-
-const checkButton =
-    document.getElementById("checkButton");
+    };
 
 
-checkButton.addEventListener("click", function () {
+    const homeScreen = document.getElementById("homeScreen");
+    const loginScreen = document.getElementById("loginScreen");
+    const resultScreen = document.getElementById("resultScreen");
+
+    const startPlacementButton =
+        document.getElementById("startPlacementButton");
+
+    const checkButton =
+        document.getElementById("checkButton");
+
+    const backToServicesButton =
+        document.getElementById("backToServicesButton");
+
+    const anotherCheckButton =
+        document.getElementById("anotherCheckButton");
 
 
-    // Get index number
+    startPlacementButton.addEventListener("click", function () {
 
-    const indexNumber =
-        document.getElementById("indexNumber").value.trim();
+        homeScreen.style.display = "none";
+        loginScreen.style.display = "flex";
 
+        window.scrollTo(0, 0);
 
-    // Get date of birth
-
-    const dateOfBirth =
-        document.getElementById("dateOfBirth").value;
+    });
 
 
-    // Check index number
+    backToServicesButton.addEventListener("click", function () {
 
-    if (indexNumber === "") {
+        loginScreen.style.display = "none";
+        homeScreen.style.display = "flex";
 
-        alert("Please enter your index number.");
+        window.scrollTo(0, 0);
 
-        return;
-    }
-
-
-    // Check date of birth
-
-    if (dateOfBirth === "") {
-
-        alert("Please enter your date of birth.");
-
-        return;
-    }
+    });
 
 
-    // Find student
+    checkButton.addEventListener("click", function () {
 
-    const student =
-        students[indexNumber];
+        const indexNumber =
+            document.getElementById("indexNumber").value.trim();
 
-
-    // Check whether index number exists
-
-    if (!student) {
-
-        alert(
-            "Index number not found. Please check your index number."
-        );
-
-        return;
-    }
+        const dateOfBirth =
+            document.getElementById("dateOfBirth").value;
 
 
-    // Put information on result screen
+        if (indexNumber === "") {
 
-    document.getElementById("studentName").textContent =
-        student.name;
+            alert("Please enter your BECE index number.");
 
-
-    document.getElementById("studentIndex").textContent =
-        indexNumber;
+            return;
+        }
 
 
-    document.getElementById("studentDateOfBirth").textContent =
-        dateOfBirth;
+        if (dateOfBirth === "") {
+
+            alert("Please enter your date of birth.");
+
+            return;
+        }
 
 
-    document.getElementById("schoolName").textContent =
-        student.school;
+        const student = students[indexNumber];
 
 
-    document.getElementById("programme").textContent =
-        student.programme;
+        if (!student) {
+
+            alert(
+                "Index number not found. Please check your index number."
+            );
+
+            return;
+        }
 
 
-    document.getElementById("schoolImage").src =
-        student.image;
+        document.getElementById("studentName").textContent =
+            student.name;
+
+        document.getElementById("studentIndex").textContent =
+            indexNumber;
+
+        document.getElementById("studentDateOfBirth").textContent =
+            dateOfBirth;
+
+        document.getElementById("schoolName").textContent =
+            student.school;
+
+        document.getElementById("programme").textContent =
+            student.programme;
+
+        document.getElementById("schoolImage").src =
+            student.image;
 
 
+        loginScreen.style.display = "none";
+        resultScreen.style.display = "block";
 
-    // Hide first screen
+        window.scrollTo(0, 0);
 
-    document.querySelector(".home-screen").style.display =
-        "none";
-
-
-    // Show result screen
-
-    document.getElementById("resultScreen").style.display =
-        "block";
+    });
 
 
-    // Move to top of page
+    anotherCheckButton.addEventListener("click", function () {
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+        resultScreen.style.display = "none";
+        loginScreen.style.display = "flex";
+
+        document.getElementById("indexNumber").value = "";
+        document.getElementById("dateOfBirth").value = "";
+
+        window.scrollTo(0, 0);
+
     });
 
 });
-
-
-
-function goBack() {
-
-
-    // Hide result screen
-
-    document.getElementById("resultScreen").style.display =
-        "none";
-
-
-    // Show first screen
-
-    document.querySelector(".home-screen").style.display =
-        "flex";
-
-
-    // Clear index number
-
-    document.getElementById("indexNumber").value = "";
-
-
-    // Clear date of birth
-
-    document.getElementById("dateOfBirth").value = "";
-
-
-    // Move to top
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-}

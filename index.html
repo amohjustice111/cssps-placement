@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Student Placement Portal</title>
+    <title>Check SHS Placement Online - Amoh Justice CSSPS Practice</title>
+
+    <meta
+        name="description"
+        content="Amoh Justice CSSPS Practice Portal. Practice checking SHS school placement online using a CSSPS-style placement service."
+    >
 
     <link rel="stylesheet" href="style.css">
 
@@ -24,17 +30,17 @@
         <div class="header-content">
 
             <div class="header-logo">
-                🎓
+                AJ
             </div>
 
             <div class="header-text">
 
                 <h1>
-                    Student Placement Portal
+                    Amoh Justice
                 </h1>
 
                 <p>
-                    School Placement Checking System
+                    CSSPS Placement Practice Portal
                 </p>
 
             </div>
@@ -45,39 +51,87 @@
 
 
 
-    <!-- FIRST SCREEN -->
+    <!-- HOME / PLACEMENT SERVICES -->
 
-    <section class="home-screen">
+    <section class="home-screen" id="homeScreen">
 
         <div class="portal-card">
 
 
-            <div class="logo">
-                🎓
-            </div>
-
-
             <h1>
-                Check School Placement
+                Placement Services
             </h1>
 
 
             <p class="subtitle">
-                Enter your index number and date of birth
-                to check your placement.
+                Select a service below to continue.
             </p>
 
 
 
-            <!-- FORM -->
+            <div class="service-box">
+
+                <h2>
+                    Check SHS Placement
+                </h2>
+
+                <p>
+                    Check your school placement using your
+                    BECE index number and date of birth.
+                </p>
+
+
+                <button id="startPlacementButton">
+                    CHECK PLACEMENT
+                </button>
+
+            </div>
+
+
+
+            <div class="practice-notice">
+
+                <strong>Practice Website</strong>
+
+                <p>
+                    This is an Amoh Justice CSSPS-style
+                    practice portal. It is not the official
+                    government CSSPS website.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CANDIDATE LOGIN -->
+
+    <section
+        class="login-screen"
+        id="loginScreen"
+    >
+
+        <div class="portal-card">
+
+            <h1>
+                Candidate Login
+            </h1>
+
+            <p class="subtitle">
+                Enter your BECE index number and date of birth
+                to check your placement.
+            </p>
+
 
             <div class="form-box">
 
 
-                <!-- INDEX NUMBER -->
-
                 <label for="indexNumber">
-                    Index Number
+                    BECE Index Number
                 </label>
 
                 <input
@@ -87,8 +141,6 @@
                 >
 
 
-
-                <!-- DATE OF BIRTH -->
 
                 <label for="dateOfBirth">
                     Date of Birth
@@ -101,10 +153,16 @@
 
 
 
-                <!-- CHECK BUTTON -->
-
                 <button id="checkButton">
                     CHECK PLACEMENT
+                </button>
+
+
+                <button
+                    class="back-button"
+                    id="backToServicesButton"
+                >
+                    BACK TO PLACEMENT SERVICES
                 </button>
 
 
@@ -116,13 +174,12 @@
 
 
 
-    <!-- SECOND SCREEN -->
+    <!-- PLACEMENT RESULT -->
 
     <section
         class="result-screen"
         id="resultScreen"
     >
-
 
         <div class="result-container">
 
@@ -138,12 +195,8 @@
 
 
 
-            <!-- SCHOOL CARD -->
-
             <div class="school-card">
 
-
-                <!-- SCHOOL IMAGE -->
 
                 <div class="school-image">
 
@@ -156,8 +209,6 @@
                 </div>
 
 
-
-                <!-- SCHOOL INFORMATION -->
 
                 <div class="school-information">
 
@@ -233,11 +284,9 @@
 
 
 
-            <!-- BACK BUTTON -->
-
             <button
                 class="back-button"
-                onclick="goBack()"
+                id="anotherCheckButton"
             >
 
                 CHECK ANOTHER INDEX NUMBER
@@ -251,11 +300,10 @@
 
 
 
-    <!-- JAVASCRIPT -->
-
     <script src="script.js"></script>
 
 
 </body>
 
 </html>
+```
